@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Mail Builder</title>
+    <link rel="stylesheet" href="/plugins/NewsletterPlugin/resources/css/builder.css">
+    <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
+    <script src="/plugins/NewsletterPlugin/resources/js/sortable.min.js" defer></script>
+    <script src="/plugins/NewsletterPlugin/resources/js/builder.js" defer></script>
+</head>
+<body>
+    <div id="email-builder">
+        <h1>E-Mail Builder</h1>
+        <div class="layouts">
+            <h2>Layouts</h2>
+            <div class="layout-options">
+                <div class="layout-option" onclick="selectLayout('layout1')">
+                    <img src="/plugins/NewsletterPlugin/resources/images/layout1.png" alt="Layout 1">
+                    <span>Layout 1</span>
+                </div>
+                <div class="layout-option" onclick="selectLayout('layout2')">
+                    <img src="/plugins/NewsletterPlugin/resources/images/layout2.png" alt="Layout 2">
+                    <span>Layout 2</span>
+                </div>
+            </div>
+        </div>
+        <div class="elements">
+            <h2>Elemente</h2>
+            <div class="element-option" draggable="true" ondragstart="drag(event, 'text')">Text</div>
+            <div class="element-option" draggable="true" ondragstart="drag(event, 'image')">Bild</div>
+        </div>
+        <div class="editor" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h2>Editor</h2>
+            <div id="editor-canvas" class="sortable">
+                <!-- E-Mail Layout wird hier geladen -->
+            </div>
+        </div>
+        <div class="actions">
+            <button onclick="saveEmail()">Speichern</button>
+            <button onclick="saveDraft()">Als Entwurf speichern</button>
+            <button onclick="loadEmail(prompt('Bitte geben Sie die ID der zu ladenden E-Mail ein:'))">Laden</button>
+            <button onclick="previewEmail()">Vorschau</button>
+        </div>
+        <div class="saved-emails">
+            <h2>Gespeicherte E-Mails</h2>
+            <div id="email-list">
+                <!-- Gespeicherte E-Mails werden hier angezeigt -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+#email-builder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.layouts, .elements, .editor, .actions, .saved-emails {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 80%;
+}
+
+.layout-options, .element-options {
+    display: flex;
+    gap: 10px;
+}
+
+.layout-option, .element-option {
+    cursor: pointer;
+    text-align: center;
+}
+
+.layout-option img {
+    width: 100px;
+    height: auto;
+}
+
+.element-option {
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#editor-canvas {
+    min-height: 400px;
+    border: 1px dashed #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+#email-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.email-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}

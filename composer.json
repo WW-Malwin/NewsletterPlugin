@@ -1,0 +1,13 @@
+{
+    "name": "deine-namespace/newsletter-plugin",
+    "description": "Ein Plugin, um Newsletter an Kunden zu versenden.",
+    "type": "plugin",
+    "require": {
+        "php": ">=7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "NewsletterPlugin\\": "src/"
+        }
+    }
+}
