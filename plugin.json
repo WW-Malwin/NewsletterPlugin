@@ -6,7 +6,7 @@
     "url": "https://deine-webseite.com",
     "license": "GPL-3.0",
     "require": {
-        "plenty/framework": "^7.0.0"
+        "plenty/framework": "^7.0"
     },
     "namespace": "NewsletterPlugin",
     "events": {
